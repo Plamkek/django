@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ serial.title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ serial.title }}</h1>
+        <img src="{{ serial.poster.url }}" width="480" height="270">
+        <p>Жанр: {{ serial.genre }}</p>
+        <p>Дата выхода: {{ serial.release_date }}</p>
+        <p>Режиссер: {{serial.director}}</p>
+        <p>Возрастное ограничение: {{serial.age}}</p>
+        <p>Среднее время серии: {{serial.avg_time}}</p>
+        <p>В ролях: {{ serial.in_roles }}</p>
+        <p>{{serial.description }}</p>
+
+        <a href="{% url 'serial-delete' serial.id %}" class="btn btn-danger">Удалить</a>
+        <a href="{% url 'serial-update' serial.id %}" class="btn btn-info">Редактировать</a>
+    </div>
+{% endblock %}

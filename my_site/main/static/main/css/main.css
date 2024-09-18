@@ -1,0 +1,96 @@
+body{
+    background: #121121;
+}
+
+aside{
+    float: left;
+    background: #181818;
+    width: 18%;
+    padding: 1.8%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img{
+    width: 66px;
+    float: left;
+}
+
+aside .logo{
+    font-size: 35px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: 4px;
+}
+
+aside h3 {
+    margin-top: 35px;
+    font-size: 27px;
+}
+
+aside ul{list-style: none}
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 19px;
+    transition: transform .5s ease;
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.23);
+}
+
+main .features {
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;
+    width: 70%;
+}
+
+main .features h1 {font-size: 60px;}
+main .features p {max-width: 800px; margin: 20px auto; margin-left: 500px}
+main .features img {float: left}
+
+
+
+main .features a {
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+main .features a:hover {
+  background: #1d49aa;
+}
+
+main .features a:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+.alert-warning{
+    float: left;
+    clear: both;
+    width: 49.24%;
+    margin: 15px 30%;
+    text-align: left;
+}
+
+form {
+    margin-left: 25%;
+    width: 55%;
+    margin top: 52px;
+}
+

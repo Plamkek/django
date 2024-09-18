@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ book.title }}</h1>
+        <img src="{{ book.poster.url }}" width="200" height="270">
+        <p>Жанр: {{ book.genre }}</p>
+        <p>Дата выхода: {{ book.release_date }}</p>
+        <p>Автор: {{book.author}}</p>
+        <p>Количество страниц: {{book.pages}}</p>
+        <p>{{book.description }}</p>
+
+        <a href="{% url 'book-delete' book.id %}" class="btn btn-danger">Удалить</a>
+        <a href="{% url 'book-update' book.id %}" class="btn btn-info">Редактировать</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'main/layout1.html' %}
+{% load static %}
+{% block title %}Просмотренные фильмы{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid home-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb" class="mt-4">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="/films">Фильмы</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ film.title }}</li>
+                        </ol>
+                    </nav>
+                    <img class="img-fluid rounded " src="{{ film.poster.url }}" alt="">
+                    <hr>
+                    <h1> {{ film.title }}</h1>
+                    <p>Жанр: {{ film.genre }}</p>
+                    <p>Дата выхода: {{ film.release_date }}</p>
+                    <p>Режиссер: {{film.director}}</p>
+                    <p>Возрастное ограничение: {{film.age}}</p>
+                    <p>Среднее время серии: {{film.avg_time}}</p>
+                    <p>В ролях: {{ film.in_roles }}</p>
+                    <p class="lead">{{film.description }}</p>
+                    <hr>
+                    <hr>
+
+                    <div class="card my-4">
+                        <h5 class="card-header">Прокомментируй:</h5>
+                        {% if user.is_authenticated %}
+                        <div class="card-body">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    {{ comment_form.text }}
+                                </div>
+                                <button type="submit" class="btn btn-primary">Отправить</button>
+                            </form>
+                        </div>
+                        {% else %}
+                        <h6 class="card-header"><a href="{% url 'signin' %}">Авторизуйтесь</a> или <a href="{% url 'signup' %}">зарегистрируйтесь</a> чтобы оставить комментарий</h6>
+                        {% endif %}
+                    </div>
+                    {% for comment in film.comments.all %}
+                    <div class="media mb-4">
+                        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                        <div class="media-body">
+                            <h5 class="mt-0">{{comment.username}}</h5>
+                            {{comment.text}}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+{% endblock %}

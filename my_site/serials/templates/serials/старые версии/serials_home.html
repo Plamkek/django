@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Просмотренные сериалы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Просмотренные сериалы</h1>
+        {% if ser %}
+            {% for i in ser %}
+                <div class="alert alert-warning">
+                    <h3>{{ i.title }}</h3>
+                    <img src="{{ i.poster.url }}" width="480" height="270">
+                    <p>Жанр: {{ i.genre }}</p>
+                    <p>Дата выхода: {{ i.release_date }}</p>
+                    <a href="{% url 'serials-detail' i.id %}" class="btn btn-warning">Подробнее</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Ничего нет(</p>
+        {% endif %}
+    </div>
+{%  endblock %}

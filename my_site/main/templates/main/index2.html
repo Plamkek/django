@@ -1,0 +1,104 @@
+{% extends 'main/layout1.html' %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    <section class="all-posts">
+    <div class="container">
+      <h1 class="my-4 text-center">Пережитые истории</h1>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                  <img height="250" src="{% static 'main/img/serials.jpg'%}" alt="" class="card-img-top">
+                  <div class="card-body">
+                      <h4 class="card-title">Сериалы</h4>
+                      <p class="card-text">Это краткое описание поста. Это краткое описание поста. Это краткое описание поста. </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                              <a href="/serials/" class="btn btn-sm btn-outline-secondary">Подробнее про сериалы</a>
+                          </div>
+                          <small class="text-muted">22.10.2020</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                  <img height="250" src="{% static 'main/img/films.jpg'%}" alt="" class="card-img-top">
+                  <div class="card-body">
+                      <h4 class="card-title">Фильмы</h4>
+                      <p class="card-text">Это краткое описание поста. Это краткое описание поста. Это краткое описание поста. </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                              <a href="/films/" class="btn btn-sm btn-outline-secondary">Подробнее про фильмы</a>
+                          </div>
+                          <small class="text-muted">21.10.2020</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                  <img height="250" src="{% static 'main/img/books.jpg'%}" alt="" class="card-img-top">
+                  <div class="card-body">
+                      <h4 class="card-title">Книги</h4>
+                      <p class="card-text">Это краткое описание поста. Это краткое описание поста. Это краткое описание поста. </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                              <a href="/books/" class="btn btn-sm btn-outline-secondary">Подробнее про книги</a>
+                          </div>
+                          <small class="text-muted">20.10.2020</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                  <img height="250" src="{% static 'main/img/3.jpg'%}" alt="" class="card-img-top">
+                  <div class="card-body">
+                      <h4 class="card-title">Аниме</h4>
+                      <p class="card-text">Это краткое описание поста. Это краткое описание поста. Это краткое описание поста. </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                              <a href="/anime/" class="btn btn-sm btn-outline-secondary">Подробнее про аниме</a>
+                          </div>
+                          <small class="text-muted">19.10.2020</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                  <img height="250" src="{% static 'main/img/1.jpg'%}" alt="" class="card-img-top">
+                  <div class="card-body">
+                      <h4 class="card-title">Мультфильмы</h4>
+                      <p class="card-text">Это краткое описание поста. Это краткое описание поста. Это краткое описание поста. </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                              <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее про мультфильмы</a>
+                          </div>
+                          <small class="text-muted">18.10.2020</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                  <img height="250" src="{% static 'main/img/2.jpg'%}" alt="" class="card-img-top">
+                  <div class="card-body">
+                      <h4 class="card-title">Манги</h4>
+                      <p class="card-text">Это краткое описание поста. Это краткое описание поста. Это краткое описание поста. </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                              <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее про манги</a>
+                          </div>
+                          <small class="text-muted">17.10.2020</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    </section>
+{%  endblock %}

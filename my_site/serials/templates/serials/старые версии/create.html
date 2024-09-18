@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Форма по добавлению просмотренного сериала{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Форма по добавлению просмотренного сериала</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.genre }}<br>
+            {{ form.release_date }}<br>
+            {{ form.director }}<br>
+            {{ form.age }}<br>
+            {{ form.avg_time }}<br>
+            {{ form.in_roles }}<br>
+            {{ form.description }}<br>
+            {{ form.poster }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить</button>
+        </form>
+    </div>
+{% endblock %}

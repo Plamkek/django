@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Прочитанные книги{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Прочитанные книги</h1>
+        {% if boo %}
+            {% for i in boo %}
+                <div class="alert alert-warning">
+                    <h3>{{ i.title }}</h3>
+                    <img src="{{ i.poster.url }}" width="200" height="270">
+                    <p>Жанр: {{ i.genre }}</p>
+                    <p>Дата выхода: {{ i.release_date }}</p>
+                    <a href="{% url 'books-detail' i.id %}" class="btn btn-warning">Подробнее</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Ничего нет(</p>
+        {% endif %}
+    </div>
+{%  endblock %}
